@@ -29,7 +29,7 @@ export const App = () => {
     TasksCollection.find(hideCompletedFilter).count()
   );
 
-  const pendingTaskTitle = `${pendingTasksCount}` ? `${pendingTasksCount}` : ''
+  const pendingTaskTitle = `${pendingTasksCount}` ? `(${pendingTasksCount})` : '()'
 
   return (
     <div className='app'>
