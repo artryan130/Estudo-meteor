@@ -34,3 +34,14 @@ if (TasksCollection.find().count() === 0) {
     'Seventh Task',
   ].forEach(taskText => insertTask(taskText, user));
 }
+
+ServiceConfiguration.configurations.upsert(
+  {service: 'github'},
+  {
+    $set: {
+      loginStyle: 'popup',
+      clientId: 'ce4b109b30462079446f', // insert your clientId here
+      secret: 'ca1431e3f91551df12b18226127775fcc59c2322'
+    }
+  }
+)
